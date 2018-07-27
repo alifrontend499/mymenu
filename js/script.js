@@ -27,14 +27,19 @@
                 // CHANGE HTML
                 if ($('span', this).html() == '+') {
                     $('span', this).html('-');
-                    $(this).parent().next().slideDown('slow');
+                    $(this).parent().next().slideDown('fast');
                 } else {
-                    $(this).parent().parent().find('ul').slideUp('slow', function () {
+                    $(this).parent().parent().find('ul').slideUp('fast', function () {
                         $(this).parent().parent().find('.mobile-icon span').html('+');
                         $(this).parent().parent().find('li').removeClass("active");
                     });
                 }
+            });
 
+            $('.site-menu-overlay').click(function () {
+                $('.site-menubar > ul ul').slideUp('fast');
+                $('.site-menubar ul').find('.mobile-icon span').html('+');
+                $('.site-menubar ul').find('li').removeClass("active");
             });
         }
     });
