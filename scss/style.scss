@@ -206,12 +206,13 @@ $secondary_color: #1d3b6f;
             >a {
                 display: block;
                 padding: 15px 20px;
-                background-color: $primary_color;
+                background-color: $secondary_color;
                 color: #fff;
             }
-            &:hover {
+            &:hover,
+            &.active {
                 >a {
-                    background-color: $secondary_color;
+                    background-color: $primary_color;
                 }
             }
         }

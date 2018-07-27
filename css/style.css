@@ -36,8 +36,8 @@
 .site-menubar ul li > ul { display: none; }
 @media (min-width: 768px) { .site-menubar ul li > ul { position: absolute; } }
 .site-menubar ul li > ul > li { width: 100%; }
-.site-menubar ul li > ul > li > a { display: block; padding: 15px 20px; background-color: #ff9b99; color: #fff; }
-.site-menubar ul li > ul > li:hover > a { background-color: #1d3b6f; }
+.site-menubar ul li > ul > li > a { display: block; padding: 15px 20px; background-color: #1d3b6f; color: #fff; }
+.site-menubar ul li > ul > li:hover > a, .site-menubar ul li > ul > li.active > a { background-color: #ff9b99; }
 .site-menubar > ul > li > ul { top: 100%; }
 .site-menubar > ul > li > ul li > ul { left: 100%; top: 0; }
 

@@ -22,13 +22,19 @@
             });
             $('.site-menubar ul > li a .mobile-icon').click(function (ev) {
                 ev.preventDefault();
-                $(this).parent().next().slideToggle('slow');
+                // ADD ACTIVE CLASS
                 $(this).parent().parent().toggleClass('active');
+                // CHANGE HTML
                 if ($('span', this).html() == '+') {
                     $('span', this).html('-');
+                    $(this).parent().next().slideDown('slow');
                 } else {
-                    $('span', this).html('+');
+                    $(this).parent().parent().find('ul').slideUp('slow', function () {
+                        $(this).parent().parent().find('.mobile-icon span').html('+');
+                        $(this).parent().parent().find('li').removeClass("active");
+                    });
                 }
+
             });
         }
     });
