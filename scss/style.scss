@@ -45,7 +45,13 @@ $secondary_color: #1d3b6f;
     }
 }
 
+// BUTTONS AND OVERLAY
 .site-menu {
+    @include minMq(768px) {
+        .mobile-menu {
+            display: none;
+        }
+    }
     @include maxMq(767px) {
         height: 40px;
         background-color: $primary_color;
@@ -58,7 +64,7 @@ $secondary_color: #1d3b6f;
             margin-top: 6.5px;
             &.menu-open {
                 position: fixed;
-                left: 205px;
+                left: 245px;
                 z-index: 9999;
                 top: 5px;
                 margin-top: 0;
@@ -86,7 +92,7 @@ $secondary_color: #1d3b6f;
 .site-menubar {
     @include maxMq(767px) {
         margin-left: 0;
-        width: 200px;
+        width: 240px;
         position: fixed;
         z-index: 9999;
         top: 0;
@@ -147,19 +153,6 @@ $secondary_color: #1d3b6f;
                     position: relative;
                 }
             }
-        }
-    }
-    ul.left-ul {
-        @include minMq(768px) {
-            float: left;
-        }
-    }
-    ul.right-ul {
-        @include minMq(768px) {
-            float: right;
-        }
-        >li {
-            margin-right: 0;
         }
     }
 }

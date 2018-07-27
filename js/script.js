@@ -36,7 +36,7 @@
                 }
             });
 
-            $('.site-menu-overlay').click(function () {
+            $('.site-menu-overlay, .small-screen-menu-icon').click(function () {
                 $('.site-menubar > ul ul').slideUp('fast');
                 $('.site-menubar ul').find('.mobile-icon span').html('+');
                 $('.site-menubar ul').find('li').removeClass("active");
